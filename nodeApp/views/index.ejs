@@ -1,0 +1,73 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <title>Phone Billing Report</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Phone Billing Report</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>Phone Billing Report</h1>
+            <p class="lead">This is the phone bill report page for an assignment.</p>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Phone Number</th>
+                    <th>Promotion</th>
+                    <th>Date</th>
+                    <th>Call begin</th>
+                    <th>Call end</th>
+                    <th>Total amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < data.length; i++) { %>
+                <tr>
+                    <td><%= data[i].phoneNumber %></td>
+                    <td><%= data[i].promotion %></td>
+                    <td><%= data[i].date %></td>
+                    <td><%= data[i].beginTime %></td>
+                    <td><%= data[i].endTime %></td>
+                    <td><%= data[i].cost %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+
+</html>
